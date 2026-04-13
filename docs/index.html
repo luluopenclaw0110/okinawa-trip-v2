@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>南海樂園・沖繩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      🌊 <span>南海樂園</span>・沖繩
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">首頁</a></li>
+      <li><a href="spots.html">景點推薦</a></li>
+      <li><a href="restaurants.html">美食餐廳</a></li>
+      <li><a href="itinerary.html">行程攻略</a></li>
+    </ul>
+    <div class="hamburger" aria-label="選單">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-panel">
+    <button class="menu-close" aria-label="關閉" onclick="closeMobileMenu()">✕</button>
+    <ul>
+      <li><a href="index.html" onclick="closeMobileMenu()">首頁</a></li>
+      <li><a href="spots.html" onclick="closeMobileMenu()">景點推薦</a></li>
+      <li><a href="restaurants.html" onclick="closeMobileMenu()">美食餐廳</a></li>
+      <li><a href="itinerary.html" onclick="closeMobileMenu()">行程攻略</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🌴 Paradise Island</div>
+    <h1>南海樂園<br><em>・沖繩</em></h1>
+    <p class="hero-sub">探索琉球王國的藍色奇幻，展開一生必訪的南方旅程</p>
+    <div class="hero-cta">
+      <a href="spots.html" class="btn btn-primary">探索景點 →</a>
+      <a href="restaurants.html" class="btn btn-outline">美食推薦 ↑</a>
+      <a href="itinerary.html" class="btn btn-outline">行程規劃 →</a>
+    </div>
+  </div>
+  <div class="scroll-hint">↓ 向下探索</div>
+</section>
+
+<!-- Spotlight Section -->
+<section id="spotlight">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Spotlight</div>
+      <h2 class="section-title">探索沖繩</h2>
+      <p class="section-sub">從世界級的水族館到隱蔽的秘境海灘，從千年古城到療癒系海景咖啡——<br>每一處風景，都在訴說屬於這座島嶼的故事。</p>
+    </div>
+
+    <div class="spotlight-grid">
+
+      <!-- Spotlight 01: 美ら海水族館 -->
+      <div class="spotlight-card reveal-left">
+        <div class="spotlight-img">
+          <img src="images/spots/spot_01.jpg" alt="美ら海水族館" onerror="this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&q=80'">
+          <div class="spotlight-badge">Featured</div>
+        </div>
+        <div class="spotlight-text">
+          <div class="spotlight-label">�场馆</div>
+          <h3 class="spotlight-title">美ら海水族館</h3>
+          <p class="spotlight-desc">
+            佇立於本部半島蔚藍海岸線上的夢幻聖地。<strong style="color:var(--primary)">黑潮之海</strong>巨型水槽中，鯨鯊緩緩游過的龐然身影搭配滿場發光的鬼蝠魟，壯闘程度令人屏息。從深海演化到南極探險，是親子同遊的首選。
+          </p>
+          <div class="spotlight-tags">
+            <span class="tag-pill">🐋 水族館</span>
+            <span class="tag-pill">👨‍👩‍👧 親子推薦</span>
+            <span class="tag-pill">🌊 海洋奇觀</span>
+          </div>
+          <a href="spots/spot-01.html" class="spotlight-link">看詳情 →</a>
+        </div>
+      </div>
+
+      <!-- Spotlight 02: 首里城 -->
+      <div class="spotlight-card reverse reveal-right">
+        <div class="spotlight-img">
+          <img src="images/spots/spot_02.jpg" alt="首里城公園" onerror="this.src='https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=900&q=80'">
+          <div class="spotlight-badge">🏯 古城</div>
+        </div>
+        <div class="spotlight-text">
+          <div class="spotlight-label">世界文化遺產</div>
+          <h3 class="spotlight-title">首里城公園</h3>
+          <p class="spotlight-desc">
+            琉球王國的榮耀象徵，<strong style="color:var(--primary)">UNESCO 世界文化遺產</strong>。見證「見せる復興」的精神，以正殿朱紅與金色雕飾重現王朝盛世。春季櫻花環繞城郭，歷史的重量在此凝結，卻也煥發新生。
+          </p>
+          <div class="spotlight-tags">
+            <span class="tag-pill">🏯 世界遺產</span>
+            <span class="tag-pill">📜 琉球歷史</span>
+            <span class="tag-pill">🌸 春季限定</span>
+          </div>
+          <a href="spots/spot-02.html" class="spotlight-link">看詳情 →</a>
+        </div>
+      </div>
+
+      <!-- Spotlight 03: 萬座毛 -->
+      <div class="spotlight-card reveal-left">
+        <div class="spotlight-img">
+          <img src="images/spots/spot_03.jpg" alt="萬座毛" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80'">
+          <div class="spotlight-badge">🌅 人氣</div>
+        </div>
+        <div class="spotlight-text">
+          <div class="spotlight-label">🌿 自然景觀</div>
+          <h3 class="spotlight-title">萬座毛</h3>
+          <p class="spotlight-desc">
+            象鼻崖畔的絕美暮色，CP值最高的自然景觀。金橙色夕陽染紅整片海域，<strong style="color:var(--primary)">象鼻岩</strong>佇立於藍天與白雲之間，是每位旅人必打卡的沖繩經典畫面。
+          </p>
+          <div class="spotlight-tags">
+            <span class="tag-pill">🌅 夕陽絕景</span>
+            <span class="tag-pill">📸 IG打卡</span>
+            <span class="tag-pill">🆓 免費景點</span>
+          </div>
+          <a href="spots/spot-03.html" class="spotlight-link">看詳情 →</a>
+        </div>
+      </div>
+
+      <!-- Spotlight 04: 古宇利島 -->
+      <div class="spotlight-card reverse reveal-right">
+        <div class="spotlight-img">
+          <img src="images/spots/spot_04.jpg" alt="古宇利島" onerror="this.src='https://images.unsplash.com/photo-1520483601560-389dff434fdf?w=900&q=80'">
+          <div class="spotlight-badge">💕 戀人島</div>
+        </div>
+        <div class="spotlight-text">
+          <div class="spotlight-label">🏝️ 島嶼風情</div>
+          <h3 class="spotlight-title">古宇利島</h3>
+          <p class="spotlight-desc">
+            穿越 2,550 公尺的古宇利大橋，抵達澄澈得近乎透明的<strong style="color:var(--primary)">古宇利海灘</strong>。被譽為「戀人之島」的超人氣景點，翡翠綠的海水與純白沙灘交織出明信片般的夢幻場景。
+          </p>
+          <div class="spotlight-tags">
+            <span class="tag-pill">🏝️ 島嶼</span>
+            <span class="tag-pill">💕 情侶推薦</span>
+            <span class="tag-pill">🌊 海灘</span>
+          </div>
+          <a href="spots/spot-04.html" class="spotlight-link">看詳情 →</a>
+        </div>
+      </div>
+
+      <!-- Spotlight 05: 玉泉洞 -->
+      <div class="spotlight-card reveal-left">
+        <div class="spotlight-img">
+          <img src="images/spots/spot_07.jpg" alt="玉泉洞王國" onerror="this.src='https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=900&q=80'">
+          <div class="spotlight-badge">🕳️ 奇觀</div>
+        </div>
+        <div class="spotlight-text">
+          <div class="spotlight-label">⛰️ 天然奇景</div>
+          <h3 class="spotlight-title">玉泉洞王國</h3>
+          <p class="spotlight-desc">
+            約五百萬年前形成的天然鐘乳洞，近百萬根<a href="spots/spot-07.html" style="color:var(--primary);font-weight:700;">鐘乳石筍</a>在洞穴中靜靜生長。地下河流穿湧而過，壯麗程度被譽為「沖繩地下神宮」，是全齡適用的雨天備案首選。
+          </p>
+          <div class="spotlight-tags">
+            <span class="tag-pill">🕳️ 鐘乳洞</span>
+            <span class="tag-pill">🌧️ 雨天備案</span>
+            <span class="tag-pill">📸 探險</span>
+          </div>
+          <a href="spots/spot-07.html" class="spotlight-link">看詳情 →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top: 72px;" class="reveal">
+      <a href="spots.html" class="btn btn-primary">看完整景點列表 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Intro Section -->
+<section class="light">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-img-wrap reveal-left">
+        <img src="images/hero-okinawa.jpg" alt="沖繩海景" onerror="this.src='https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&q=80'">
+      </div>
+      <div class="intro-text reveal-right">
+        <div class="section-tag">About</div>
+        <h2>為什麼選擇 <span>沖繩</span>？</h2>
+        <p>沖繩由 160 座島嶼組成，擁有地球上最美的珊瑚礁海域、古老琉球王國的文明遺產，以及融合日美文化的獨特風情。</p>
+        <p>湛藍到不可思議的海水、終年溫暖的氣候，與那讓人魂牽夢縈的島嶼慢時光。無論是親子同遊、情侶度假，還是深度文化探索，沖繩都能給你一段不同於日本本島的獨特記憶。</p>
+        <div class="intro-features">
+          <div class="intro-feature">
+            <div class="icon">🏝️</div>
+            <span>160+ 座島嶼</span>
+          </div>
+          <div class="intro-feature">
+            <div class="icon">🌊</div>
+            <span>全年溫暖氣候</span>
+          </div>
+          <div class="intro-feature">
+            <div class="icon">🏰</div>
+            <span>UNESCO 世界遺產</span>
+          </div>
+          <div class="intro-feature">
+            <div class="icon">🐋</div>
+            <span>黑潮水族館</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="dark">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <h3>160+</h3>
+        <p>座島嶼組成</p>
+      </div>
+      <div class="stat-item reveal">
+        <h3>9</h3>
+        <p>座世界文化遺產</p>
+      </div>
+      <div class="stat-item reveal">
+        <h3>25°C</h3>
+        <p>年均海水溫度</p>
+      </div>
+      <div class="stat-item reveal">
+        <h3>500萬</h3>
+        <p>玉泉洞鐘乳石年齡</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Day Preview Cards -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">行程建議</div>
+      <h2 class="section-title">三天精華行程</h2>
+      <p class="section-sub">跟著我們的腳步，用最短的時間，感受最濃縮的沖繩魅力</p>
+    </div>
+
+    <!-- Day 1 -->
+    <div class="day-section reveal">
+      <div class="day-header">
+        <div class="day-number">01</div>
+        <div>
+          <div class="day-title">第一天：北部自然探索</div>
+          <div class="day-subtitle">水族的奇幻 × 古宇利的蔚藍</div>
+        </div>
+      </div>
+      <div class="day-cards">
+        <div class="day-card">
+          <div class="day-card-img">
+            <img src="images/spots/spot_01.jpg" alt="美ら海水族館" onerror="this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80'">
+            <div class="day-card-type type-spot">景點</div>
+          </div>
+          <div class="day-card-body">
+            <h4 class="day-card-title">美ら海水族館</h4>
+            <p class="day-card-desc">黑潮之海巨型水槽，鯨鯊共游的夢幻體驗</p>
+            <a href="spots/spot-01.html" class="day-card-link">繼續閱讀 →</a>
+          </div>
+        </div>
+        <div class="day-card">
+          <div class="day-card-img">
+            <img src="images/spots/spot_04.jpg" alt="古宇利島" onerror="this.src='https://images.unsplash.com/photo-1520483601560-389dff434fdf?w=600&q=80'">
+            <div class="day-card-type type-spot">景點</div>
+          </div>
+          <div class="day-card-body">
+            <h4 class="day-card-title">古宇利島</h4>
+            <p class="day-card-desc">穿越大橋抵達澄澈透明海灘，戀人聖地</p>
+            <a href="spots/spot-04.html" class="day-card-link">繼續閱讀 →</a>
+          </div>
+        </div>
+        <div class="day-card">
+          <div class="day-card-img">
+            <img src="images/foods/food_expand_inn.jpg" alt="INN CAFE" onerror="this.src='https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80'">
+            <div class="day-card-type type-food">美食</div>
+          </div>
+          <div class="day-card-body">
+            <h4 class="day-card-title">INN CAFE</h4>
+            <p class="day-card-desc">古宇利島超人氣海景咖啡，Tiffany藍菜單</p>
+            <a href="restaurants/restaurant-01.html" class="day-card-link">繼續閱讀 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-section reveal">
+      <div class="day-header">
+        <div class="day-number">02</div>
+        <div>
+          <div class="day-title">第二天：中部文化之旅</div>
+          <div class="day-subtitle">古城風華 × 鐘乳洞奇觀</div>
+        </div>
+      </div>
+      <div class="day-cards">
+        <div class="day-card">
+          <div class="day-card-img">
+            <img src="images/spots/spot_02.jpg" alt="首里城" onerror="this.src='https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80'">
+            <div class="day-card-type type-spot">景點</div>
+          </div>
+          <div class="day-card-body">
+            <h4 class="day-card-title">首里城公園</h4>
+            <p class="day-card-desc">琉球王國榮耀象徵，UNESCO世界文化遺產</p>
+            <a href="spots/spot-02.html" class="day-card-link">繼續閱讀 →</a>
+          </div>
+        </div>
+        <div class="day-card">
+          <div class="day-card-img">
+            <img src="images/spots/spot_07.jpg" alt="玉泉洞" onerror="this.src='https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=600&q=80'">
+            <div class="day-card-type type-spot">景點</div>
+          </div>
+          <div class="day-card-body">
+            <h4 class="day-card-title">玉泉洞王國</h4>
+            <p class="day-card-desc">百萬年鐘乳石奇觀，地下神宮的壯麗</p>
+            <a href="spots/spot-07.html" class="day-card-link">繼續閱讀 →</a>
+          </div>
+        </div>
+        <div class="day-card">
+          <div class="day-card-img">
+            <img src="images/spots/spot_08.jpg" alt="齋場御嶽" onerror="this.src='https://images.unsplash.com/photo-1526481280693-3bfa7568cae3?w=600&q=80'">
+            <div class="day-card-type type-spot">景點</div>
+          </div>
+          <div class="day-card-body">
+            <h4 class="day-card-title">齋場御嶽</h4>
+            <p class="day-card-desc">琉球王國最高聖地，UNESCO世界文化遺產</p>
+            <a href="spots/spot-08.html" class="day-card-link">繼續閱讀 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-section reveal">
+      <div class="day-header">
+        <div class="day-number">03</div>
+        <div>
+          <div class="day-title">第三天：南部人文巡禮</div>
+          <div class="day-subtitle">祈念和平 × 盡情購物</div>
+        </div>
+      </div>
+      <div class="day-cards">
+        <div class="day-card">
+          <div class="day-card-img">
+            <img src="images/spots-expand/6_okinawa_peace_memorial.jpg" alt="和平祈念堂" onerror="this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80'">
+            <div class="day-card-type type-spot">景點</div>
+          </div>
+          <div class="day-card-body">
+            <h4 class="day-card-title">和平祈念堂</h4>
+            <p class="day-card-desc">十八年磨一劍的和平祈念像，承載傷痕與希望</p>
+            <a href="spots/spot-15.html" class="day-card-link">繼續閱讀 →</a>
+          </div>
+        </div>
+        <div class="day-card">
+          <div class="day-card-img">
+            <img src="images/spots/spot_10.jpg" alt="殘波岬" onerror="this.src='https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=600&q=80'">
+            <div class="day-card-type type-spot">景點</div>
+          </div>
+          <div class="day-card-body">
+            <h4 class="day-card-title">殘波岬公園</h4>
+            <p class="day-card-desc">白色燈塔與珊瑚礁岩，夕陽約定的浪漫</p>
+            <a href="spots/spot-10.html" class="day-card-link">繼續閱讀 →</a>
+          </div>
+        </div>
+        <div class="day-card">
+          <div class="day-card-img">
+            <img src="images/spots/spot_09.jpg" alt="港川外人住宅" onerror="this.src='https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=600&q=80'">
+            <div class="day-card-type type-spot">景點</div>
+          </div>
+          <div class="day-card-body">
+            <h4 class="day-card-title">港川外人住宅</h4>
+            <p class="day-card-desc">時光凝結的美式風情，處處 IG 美拍點</p>
+            <a href="spots/spot-09.html" class="day-card-link">繼續閱讀 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 72px;" class="reveal">
+      <a href="itinerary.html" class="btn btn-outline-dark">查看完整行程攻略 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner">
+  <div class="container reveal">
+    <h2>準備好出發了嗎？</h2>
+    <p>從航班到住宿，從景點到美食，我們為你整理了最完整的沖繩旅遊攻略</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="spots.html" class="btn btn-primary">開始探索</a>
+      <a href="itinerary.html" class="btn btn-outline">行程攻略</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>🌊 <span>南海樂園</span>・沖繩</h3>
+        <p>探索琉球王國的藍色奇幻，展開一生必訪的南方旅程。</p>
+      </div>
+      <div class="footer-links">
+        <h4>快速連結</h4>
+        <ul>
+          <li><a href="spots.html">景點推薦</a></li>
+          <li><a href="restaurants.html">美食餐廳</a></li>
+          <li><a href="itinerary.html">行程攻略</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>資源</h4>
+        <ul>
+          <li><a href="#">旅遊攻略</a></li>
+          <li><a href="#">交通指南</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 南海樂園・沖繩｜文字編輯：文字編輯高手</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

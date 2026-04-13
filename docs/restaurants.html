@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美食餐廳｜南海樂園・沖繩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .rest-card { display: flex; flex-direction: column; background: var(--white); border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .rest-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 20px 56px rgba(2,48,71,0.16); }
+    .rest-card-img { aspect-ratio: 16/9; overflow: hidden; }
+    .rest-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .rest-card:hover .rest-card-img img { transform: scale(1.08); }
+    .rest-card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .rest-card-body h3 { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; color: var(--dark); margin-bottom: 8px; }
+    .rest-card-body p { font-size: 0.85rem; color: var(--text-light); line-height: 1.7; flex: 1; margin-bottom: 16px; }
+    .rest-card-cta { font-size: 0.82rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px; transition: var(--transition); }
+    .rest-card:hover .rest-card-cta { gap: 10px; color: var(--secondary); }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">🌊 <span>南海樂園</span>・沖繩</a>
+    <ul class="nav-links">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="spots.html">景點推薦</a></li>
+      <li><a href="restaurants.html" class="active">美食餐廳</a></li>
+      <li><a href="itinerary.html">行程攻略</a></li>
+    </ul>
+    <div class="hamburger" aria-label="選單">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-panel">
+    <button class="menu-close" aria-label="關閉" onclick="closeMobileMenu()">✕</button>
+    <ul>
+      <li><a href="index.html" onclick="closeMobileMenu()">首頁</a></li>
+      <li><a href="spots.html" onclick="closeMobileMenu()">景點推薦</a></li>
+      <li><a href="restaurants.html" onclick="closeMobileMenu()">美食餐廳</a></li>
+      <li><a href="itinerary.html" onclick="closeMobileMenu()">行程攻略</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Page Header -->
+<header class="page-header">
+  <div class="container">
+    <h1>🍖 美食餐廳</h1>
+    <p>用舌尖記憶這座島嶼最動人的滋味，從和牛燒肉到懸崖海景咖啡</p>
+  </div>
+</header>
+
+<!-- Restaurants Grid -->
+<section>
+  <div class="container">
+    <div class="section-header reveal" style="text-align:center;margin-bottom:56px;">
+      <div class="section-tag">美食地圖</div>
+      <h2 class="section-title">沖繩必吃推薦</h2>
+    </div>
+    <div class="card-grid">
+
+      <a href="restaurants/restaurant-05.html" class="rest-card reveal">
+        <div class="rest-card-img">
+          <img src="images/foods/food_01.jpg" alt="燒肉 琉球之牛" onerror="this.src='https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80'">
+        </div>
+        <div class="rest-card-body">
+          <h3>燒肉 琉球之牛</h3>
+          <p>藏身於國際通的高級燒肉名店，嚴選沖繩縣產和牛，特製晚餐套餐油花均勻，在炭火上滋滋作響。適合情侶約會或慶祝特殊紀念日。</p>
+          <span class="rest-card-cta">看完整介紹 →</span>
+        </div>
+      </a>
+
+      <a href="restaurants/restaurant-06.html" class="rest-card reveal">
+        <div class="rest-card-img">
+          <img src="images/foods/food_02.jpg" alt="燒肉本部牧場" onerror="this.src='https://images.unsplash.com/photo-1553522991-71439aa62779?w=600&q=80'">
+        </div>
+        <div class="rest-card-body">
+          <h3>燒肉本部牧場</h3>
+          <p>距離美ら海水族館僅五分鐘車程，自家牧場培育的品牌牛「もとぶ牛」，以發酵飼料餵養，中午時段 CP 值最高，全年無公休。</p>
+          <span class="rest-card-cta">看完整介紹 →</span>
+        </div>
+      </a>
+
+      <a href="restaurants/restaurant-07.html" class="rest-card reveal">
+        <div class="rest-card-img">
+          <img src="images/foods/food_03.jpg" alt="花人逢" onerror="this.src='https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80'">
+        </div>
+        <div class="rest-card-body">
+          <h3>花人逢</h3>
+          <p>本部町山間景觀咖啡廳，由古民家改裝，窗外是令人屏息的翡翠綠海岸線，義式窯烤手工披薩用料實在，是 IG 打卡熱點。</p>
+          <span class="rest-card-cta">看完整介紹 →</span>
+        </div>
+      </a>
+
+      <a href="restaurants/restaurant-08.html" class="rest-card reveal">
+        <div class="rest-card-img">
+          <img src="images/foods/food_04.jpg" alt="浜辺の茶屋" onerror="this.src='https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80'">
+        </div>
+        <div class="rest-card-body">
+          <h3>浜辺の茶屋</h3>
+          <p>南城市玉城海岸懸崖上的元祖海景咖啡廳，數十年穩坐熱搜榜，太平洋浩渺盡收眼底，窗外座位可聽潮與海風。</p>
+          <span class="rest-card-cta">看完整介紹 →</span>
+        </div>
+      </a>
+
+      <a href="restaurants/restaurant-09.html" class="rest-card reveal">
+        <div class="rest-card-img">
+          <img src="images/foods/food_05.jpg" alt="風林火山" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80'">
+        </div>
+        <div class="rest-card-body">
+          <h3>風林火山</h3>
+          <p>清晨七點開門的日式早餐專門店，使用阿古豬、嚴選日本米與秘製柴魚昆布高湯，昭和風情的低調沉穩氛圍。</p>
+          <span class="rest-card-cta">看完整介紹 →</span>
+        </div>
+      </a>
+
+      <a href="restaurants/restaurant-10.html" class="rest-card reveal">
+        <div class="rest-card-img">
+          <img src="images/foods/food_07.jpg" alt="Banta Cafe" onerror="this.src='https://images.unsplash.com/photo-1534361960057-19889db9621e?w=600&q=80'">
+        </div>
+        <div class="rest-card-body">
+          <h3>Banta Cafe</h3>
+          <p>讀谷村懸崖上的日本最大規模海景咖啡廳之一，四個特色主題區，無時間限制用餐，夕陽時分金橙色光線將大海染成琥珀色。</p>
+          <span class="rest-card-cta">看完整介紹 →</span>
+        </div>
+      </a>
+
+      <a href="restaurants/restaurant-01.html" class="rest-card reveal">
+        <div class="rest-card-img">
+          <img src="images/foods/food_expand_inn.jpg" alt="INN CAFE" onerror="this.src='https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80'">
+        </div>
+        <div class="rest-card-body">
+          <h3>INN CAFE｜古宇利島</h3>
+          <p>黑色集裝箱裡，藏著一座碧藍海。古宇利大橋無敵海景相伴，黑毛和牛咖哩飯肉香濃郁，CP值在觀光區中相當難得。</p>
+          <span class="rest-card-cta">看完整介紹 →</span>
+        </div>
+      </a>
+
+      <a href="restaurants/restaurant-02.html" class="rest-card reveal">
+        <div class="rest-card-img">
+          <img src="images/foods/food_expand_ebisu.jpg" alt="えびす豆腐料理店" onerror="this.src='https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80'">
+        </div>
+        <div class="rest-card-body">
+          <h3>えびす豆腐料理店｜名護</h3>
+          <p>一塊豆腐，承載十八年的名水與手感。使用名護市指定文化遺產「轟之瀧」瀑布水，地釜手工製作豆腐，豆香飽滿而自然。</p>
+          <span class="rest-card-cta">看完整介紹 →</span>
+        </div>
+      </a>
+
+      <a href="restaurants/restaurant-03.html" class="rest-card reveal">
+        <div class="rest-card-img">
+          <img src="images/foods/food_expand_fuu.jpg" alt="fuu cafe" onerror="this.src='https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80'">
+        </div>
+        <div class="rest-card-body">
+          <h3>fuu cafe｜本部町・瀨底島</h3>
+          <p>瀨底秘境木屋，連咖啡都是都是一場冒險。完全預約制，專業咖啡師淺焙咖啡香氣飽滿，海葡萄與阿古豬職人食材。</p>
+          <span class="rest-card-cta">看完整介紹 →</span>
+        </div>
+      </a>
+
+      <a href="restaurants/restaurant-04.html" class="rest-card reveal">
+        <div class="rest-card-img">
+          <img src="images/foods/food_expand_jack.jpg" alt="ジャッキーステーキハウス" onerror="this.src='https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80'">
+        </div>
+        <div class="rest-card-body">
+          <h3>ジャッキーステーキハウス｜那霸</h3>
+          <p>七十年老店，沖繩牛排文化的原點。1953年美軍基地時代起家，紐約客大份量250g不到三千日幣，吃過就懂CP值驚人。</p>
+          <span class="rest-card-cta">看完整介紹 →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>🌊 <span>南海樂園</span>・沖繩</h3>
+        <p>探索琉球王國的藍色奇幻，展開一生必訪的南方旅程。</p>
+      </div>
+      <div class="footer-links">
+        <h4>快速連結</h4>
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="spots.html">景點推薦</a></li>
+          <li><a href="restaurants.html">美食餐廳</a></li>
+          <li><a href="itinerary.html">行程攻略</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>資源</h4>
+        <ul>
+          <li><a href="#">旅遊攻略</a></li>
+          <li><a href="#">交通指南</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 南海樂園・沖繩｜文字編輯：文字編輯高手</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
