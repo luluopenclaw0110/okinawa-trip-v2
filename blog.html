@@ -10,161 +10,197 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- 頁首 -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">🌴 Okinawa</a>
-      <nav class="nav-menu">
-        <a href="index.html">首頁</a>
-        <a href="spots.html">景點</a>
-        <a href="restaurants.html">美食</a>
-        <a href="itinerary.html">行程</a>
-        <a href="blog.html" class="active">遊記</a>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="選單">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
 
-  <!-- 頁面標題區 -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>🌴 沖繩遊記精選摘要</h1>
-      <p class="hero-subtitle">南海樂園・沖繩</p>
-      <div class="update-time">
-        <span class="update-label">📅 更新時間：</span>
-        <span class="update-date" id="update-date">載入中...</span>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      🌊 <span>南海樂園</span>・沖繩
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="spots.html">景點推薦</a></li>
+      <li><a href="restaurants.html">美食餐廳</a></li>
+      <li><a href="itinerary.html">行程攻略</a></li>
+      <li><a href="blog.html" class="active">遊記摘要</a></li>
+    </ul>
+    <div class="hamburger" aria-label="選單">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-panel">
+    <button class="menu-close" aria-label="關閉" onclick="closeMobileMenu()">✕</button>
+    <ul>
+      <li><a href="index.html" onclick="closeMobileMenu()">首頁</a></li>
+      <li><a href="spots.html" onclick="closeMobileMenu()">景點推薦</a></li>
+      <li><a href="restaurants.html" onclick="closeMobileMenu()">美食餐廳</a></li>
+      <li><a href="itinerary.html" onclick="closeMobileMenu()">行程攻略</a></li>
+      <li><a href="blog.html" onclick="closeMobileMenu()">遊記摘要</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1>🌴 沖繩遊記精選摘要</h1>
+    <p class="hero-subtitle">南海樂園・沖繩</p>
+    <div class="update-time">
+      <span class="update-label">📅 更新時間：</span>
+      <span class="update-date" id="update-date">載入中...</span>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Grid -->
+<main class="container">
+  <div class="blog-grid" id="blog-content">
+    <!-- 動態內容區塊：爬蟲專家請在此處替換整個 .blog-grid 內容 -->
+    <article class="blog-card">
+      <div class="blog-card-header">
+        <div class="blog-tag">🗾 景點探索</div>
+        <div class="blog-date">2025.03.15</div>
+      </div>
+      <h2 class="blog-card-title">古宇利島・戀人之聖地</h2>
+      <div class="blog-card-summary">
+        <div class="summary-item">
+          <span class="summary-icon">🗾</span>
+          <span class="summary-label">景點：</span>
+          <span class="summary-text">古宇利大橋、古宇利海灘、心形礁岩</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-icon">🍽️</span>
+          <span class="summary-label">美食：</span>
+          <span class="summary-text">蝦蝦餐車 Shrimp Wagon、Tacos Coffee</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-icon">🚗</span>
+          <span class="summary-label">交通：</span>
+          <span class="summary-text">自駕，過古宇利大橋約 5 分鐘</span>
+        </div>
+      </div>
+      <div class="blog-card-tags">
+        <span class="tag">古宇利島</span>
+        <span class="tag">海景</span>
+        <span class="tag">自駕</span>
+        <span class="tag">情侶</span>
+      </div>
+      <a href="#" class="btn-read-more">閱讀原文 →</a>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-card-header">
+        <div class="blog-tag">🏰 古城風情</div>
+        <div class="blog-date">2025.03.10</div>
+      </div>
+      <h2 class="blog-card-title">首里城・琉球王國的記憶</h2>
+      <div class="blog-card-summary">
+        <div class="summary-item">
+          <span class="summary-icon">🗾</span>
+          <span class="summary-label">景點：</span>
+          <span class="summary-text">守禮門、首里城正殿、龍潭</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-icon">🍽️</span>
+          <span class="summary-label">美食：</span>
+          <span class="summary-text">首里殿 Barbecue、沖繩麵</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-icon">🏨</span>
+          <span class="summary-label">住宿：</span>
+          <span class="summary-text">那霸市區，步行 15 分鐘</span>
+        </div>
+      </div>
+      <div class="blog-card-tags">
+        <span class="tag">首里城</span>
+        <span class="tag">世界遺產</span>
+        <span class="tag">歷史</span>
+        <span class="tag">文化</span>
+      </div>
+      <a href="#" class="btn-read-more">閱讀原文 →</a>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-card-header">
+        <div class="blog-tag">🌅 夕陽沙灘</div>
+        <div class="blog-date">2025.03.05</div>
+      </div>
+      <h2 class="blog-card-title">北谷町・美國村日落</h2>
+      <div class="blog-card-summary">
+        <div class="summary-item">
+          <span class="summary-icon">🗾</span>
+          <span class="summary-label">景點：</span>
+          <span class="summary-text">日落海灘、摩天輪、美國村</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-icon">🍽️</span>
+          <span class="summary-label">美食：</span>
+          <span class="summary-text">Red Lobster、Häagen-Dazs、Seaside Cafe</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-icon">🚗</span>
+          <span class="summary-label">交通：</span>
+          <span class="summary-text">公車 20、120 號，約 1 小時</span>
+        </div>
+      </div>
+      <div class="blog-card-tags">
+        <span class="tag">北谷町</span>
+        <span class="tag">美國村</span>
+        <span class="tag">夕陽</span>
+        <span class="tag">購物</span>
+      </div>
+      <a href="#" class="btn-read-more">閱讀原文 →</a>
+    </article>
+    <!-- 動態內容區塊 End -->
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>🌊 Okinawa Trip <span>南海樂園・沖繩</span></h3>
+        <p>探索琉球王國的藍色奇幻，展開一生必訪的南方旅程</p>
+      </div>
+      <div class="footer-links">
+        <h4>快速連結</h4>
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="spots.html">景點推薦</a></li>
+          <li><a href="restaurants.html">美食餐廳</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>更多</h4>
+        <ul>
+          <li><a href="itinerary.html">行程攻略</a></li>
+          <li><a href="blog.html">遊記摘要</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- 遊記卡片區塊 -->
-  <main class="container">
-    <!-- 動態內容區塊：爬蟲專家請在此處替換整個 .blog-grid 內容 -->
-    <div class="blog-grid" id="blog-content">
-      <!-- 預設範例卡片（實際內容由爬蟲專家更新） -->
-      <article class="blog-card">
-        <div class="blog-card-header">
-          <div class="blog-tag">🗾 景點探索</div>
-          <div class="blog-date">2025.03.15</div>
-        </div>
-        <h2 class="blog-card-title">古宇利島・戀人之聖地</h2>
-        <div class="blog-card-summary">
-          <div class="summary-item">
-            <span class="summary-icon">🗾</span>
-            <span class="summary-label">景點：</span>
-            <span class="summary-text">古宇利大橋、古宇利海灘、心形礁岩</span>
-          </div>
-          <div class="summary-item">
-            <span class="summary-icon">🍽️</span>
-            <span class="summary-label">美食：</span>
-            <span class="summary-text">蝦蝦餐車 Shrimp Wagon、Tacos Coffee</span>
-          </div>
-          <div class="summary-item">
-            <span class="summary-icon">🚗</span>
-            <span class="summary-label">交通：</span>
-            <span class="summary-text">自駕，過古宇利大橋約 5 分鐘</span>
-          </div>
-        </div>
-        <div class="blog-card-tags">
-          <span class="tag">古宇利島</span>
-          <span class="tag">海景</span>
-          <span class="tag">自駕</span>
-          <span class="tag">情侶</span>
-        </div>
-        <a href="#" class="btn-read-more">閱讀原文 →</a>
-      </article>
-
-      <article class="blog-card">
-        <div class="blog-card-header">
-          <div class="blog-tag">🏰 古城風情</div>
-          <div class="blog-date">2025.03.10</div>
-        </div>
-        <h2 class="blog-card-title">首里城・琉球王國的記憶</h2>
-        <div class="blog-card-summary">
-          <div class="summary-item">
-            <span class="summary-icon">🗾</span>
-            <span class="summary-label">景點：</span>
-            <span class="summary-text">守禮門、首里城正殿、龍潭</span>
-          </div>
-          <div class="summary-item">
-            <span class="summary-icon">🍽️</span>
-            <span class="summary-label">美食：</span>
-            <span class="summary-text">首里殿 Barbecue、沖繩麵</span>
-          </div>
-          <div class="summary-item">
-            <span class="summary-icon">🏨</span>
-            <span class="summary-label">住宿：</span>
-            <span class="summary-text">那霸市區，步行 15 分鐘</span>
-          </div>
-        </div>
-        <div class="blog-card-tags">
-          <span class="tag">首里城</span>
-          <span class="tag">世界遺產</span>
-          <span class="tag">歷史</span>
-          <span class="tag">文化</span>
-        </div>
-        <a href="#" class="btn-read-more">閱讀原文 →</a>
-      </article>
-
-      <article class="blog-card">
-        <div class="blog-card-header">
-          <div class="blog-tag">🌅 夕陽沙灘</div>
-          <div class="blog-date">2025.03.05</div>
-        </div>
-        <h2 class="blog-card-title">北谷町・美國村日落</h2>
-        <div class="blog-card-summary">
-          <div class="summary-item">
-            <span class="summary-icon">🗾</span>
-            <span class="summary-label">景點：</span>
-            <span class="summary-text">日落海灘、摩天輪、美國村</span>
-          </div>
-          <div class="summary-item">
-            <span class="summary-icon">🍽️</span>
-            <span class="summary-label">美食：</span>
-            <span class="summary-text">Red Lobster、Häagen-Dazs、Seaside Cafe</span>
-          </div>
-          <div class="summary-item">
-            <span class="summary-icon">🚗</span>
-            <span class="summary-label">交通：</span>
-            <span class="summary-text">公車 20、120 號，約 1 小時</span>
-          </div>
-        </div>
-        <div class="blog-card-tags">
-          <span class="tag">北谷町</span>
-          <span class="tag">美國村</span>
-          <span class="tag">夕陽</span>
-          <span class="tag">購物</span>
-        </div>
-        <a href="#" class="btn-read-more">閱讀原文 →</a>
-      </article>
+    <div class="footer-bottom">
+      <p>© 2025 Okinawa Trip. All rights reserved.</p>
     </div>
-    <!-- 動態內容區塊 End -->
-  </main>
+  </div>
+</footer>
 
-  <!-- 頁尾 -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>🌴 Okinawa Trip - 南海樂園・沖繩</p>
-      <p class="footer-copy">© 2025 Okinawa Trip. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- JS -->
-  <script src="js/main.js"></script>
-  <script>
-    // 更新時間（可由爬蟲專家動態修改）
-    const updateDateEl = document.getElementById('update-date');
-    if (updateDateEl) {
-      updateDateEl.textContent = new Date().toLocaleString('zh-TW', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit'
-      });
-    }
-  </script>
+<script src="js/main.js"></script>
+<script>
+  const updateDateEl = document.getElementById('update-date');
+  if (updateDateEl) {
+    updateDateEl.textContent = new Date().toLocaleString('zh-TW', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  }
+</script>
 </body>
 </html>
